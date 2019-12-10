@@ -21,9 +21,9 @@ public class PrimeTask extends MathTask {
 
     @Override
     public void run() {
-        for (int i = 2; i < theArray.length; i++) {
+        for (int i = 1; i < theArray.length; i++) {
             if (!checkPrime(i)) {
-                theArray[i] = -1;
+                theArray[i] -= 1;
             }
         }
     }

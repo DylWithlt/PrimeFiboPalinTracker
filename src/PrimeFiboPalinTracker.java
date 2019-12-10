@@ -33,7 +33,10 @@ public class PrimeFiboPalinTracker {
         for (int i = 1; i < bigNum ; i++) {
             if (primeFiboPalinTracker[i] == 111) {
                 System.out.println("Tripple at: " + i);
-            } else if (primeFiboPalinTracker[i] == 11) {
+            }
+        }
+        for (int i = 1; i < bigNum; i++) {
+            if (primeFiboPalinTracker[i] == 11) {
                 System.out.println("Fibo and Prime at: " + i);
             } else if (primeFiboPalinTracker[i] == 101) {
                 System.out.println("Palin and Prime at: " + i);
