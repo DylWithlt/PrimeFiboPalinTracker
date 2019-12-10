@@ -7,13 +7,16 @@ public class PrimeTask extends MathTask {
     }
 
     private static boolean checkPrime(long n) {
-
-        if (n % 2 == 0 && n != 2)
+        if (n == 1) {
             return false;
-        return (LongStream.rangeClosed(3, (long) Math.sqrt(n))
-                .filter((x) -> (n % x == 0))
-                .count() == 0);
-
+        }
+        for (int i = 2; i < n/2; i++) {
+            int remainder = (int) (n%i);
+            if (n%i == 0) {
+                return false;
+            }
+        }
+        return true;
     }
 
     @Override
